@@ -10,14 +10,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // TODO Step 1: Reference RecyclerView object
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
 
-        //TODO Step 2: Provide a LayoutManager
-        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL ,false)
+        recyclerView.layoutManager = LinearLayoutManager(this)
 
+        val numbers = arrayOf(30, 40, 50)
 
 
         //TODO Step 4: Provide a RecyclerView.Adapter
+        recyclerView.adapter = NumberDisplayAdapter(numbers)
     }
 }
