@@ -18,14 +18,13 @@ class NumberDisplayAdapter(private val numbers: Array<Int>): RecyclerView.Adapte
     }
 
     override fun onBindViewHolder(holder: NumberViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        holder.textView.text = numbers[position].toString()
+        holder.textView.textSize = numbers[position].toFloat()
     }
 
     override fun getItemCount(): Int {
         return numbers.size
 
     }
-
-    // TODO Step 3b: Complete function definitions for adapter
 
 }
